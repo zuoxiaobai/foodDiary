@@ -1,0 +1,76 @@
+<!--miniprogram/pages/index/index.wxml-->
+
+<view>
+  <!-- 顶部时间、头像 -->
+  <view class="top">
+    <picker mode="multiSelector" bindchange="yearMonthChange" value="{{yearMonthIndex}}" range="{{yearMonthArr}}">
+      <view class="select-view">
+        <view>
+          {{yearMonthArr[0][yearMonthIndex[0]]}}{{yearMonthArr[1][yearMonthIndex[1]]}}  
+        </view>
+        <view class="flexgap"></view>
+        <image src="/images/select-tb.png"></image>
+      </view>
+    </picker>
+    <!-- 如果选择的时间不是当前时间，显示返回按钮 -->
+    <button wx:if="{{curDayStr !== todayStr}}" type="default" size="mini" class="returnbtn" bindtap="returnToday">
+      <!-- 返回  -->
+      {{today[0]}}-{{today[1]}}-{{today[2]}}
+    </button>
+    <view class="flexgap"></view>
+
+    <!-- avatar -->
+    <!-- <open-data type="userNickName"></open-data> -->
+    <open-data type="userAvatarUrl" class="avatar"></open-data>
+  </view>
+
+
+  <!-- 日期 -->
+  <scroll-view scroll-x scroll-into-view="{{scrollPosition}}" class="curday">
+    <view wx:for="{{dateArr}}" wx:key="val" class="curday-sec" id="curday-sec-{{dateArr[index].val}}" bindtap="clickDate">
+      <view class="curday-sec-text curday-sec-text-{{curDate == dateArr[index].val}}">{{dateArr[index].val}}</view>
+      <view class="curday-sec-bottombg curday-sec-bottombg-{{dateArr[index].dateSatus}}"></view>
+    </view>
+  </scroll-view>
+
+
+  <!-- 状态 -->
+  <view class="status">
+    今日状态：
+    <picker mode="selector" bindchange="bindStatusChange" value="{{curStatus}}" range="{{statusArr}}" range-key="text">
+      <view class="select-view">
+        <view class="status-bg curday-sec-bottombg-{{statusArr[curStatus].content}}"></view>
+        <view>
+          {{statusArr[curStatus].text}}  
+        </view>
+        <view class="flexgap"></view>
+        <image src="/images/select-tb.png"></image>
+      </view>
+    </picker>
+    <view class="flexgap"></view>
+    <button type="primary" size="mini" bindtap="addHistory">添加记录</button>
+  </view>
+
+
+  <!-- 内容 -->
+  <view class="main">
+    <view class="main-sec main-sectitle">
+      <view class="main-sec-time">时间</view>
+      <view class="main-sec-food">食物及数量</view>
+      <view class="main-sec-remark">症状或备注</view>
+    </view>
+    <!-- 渲染历史记录信息 -->
+    <view id="time-{{index}}" wx:for="{{history}}" wx:key="_id" class="main-sec main-seccontent" bindtap="historySecClick">
+      <view class="main-sec-time">{{history[index].time}}</view>
+      <view class="main-sec-food">{{history[index].foodAndCount}}</view>
+      <view class="main-sec-remark">{{history[index].symptomAndRemark}}</view>
+    </view>
+    <!-- 如果记录为空 -->
+    <view wx:if="{{history.length < 1}}" class="nodata">
+      <!-- 增加添加记录的点击范围，防止手机上面不好点击 -->
+      暂无记录，<text class="color-green" bindtap="addHistory" style="padding: 30px 0;">添加一条记录 </text>
+    </view>
+  </view>
+
+
+</view>

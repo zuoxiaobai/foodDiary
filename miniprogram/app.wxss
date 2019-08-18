@@ -1,0 +1,108 @@
+
+/* 菜单link */
+.menu-sec {
+  margin-top:20px;font-size:16px;
+  background:#fff;
+}
+.menu-sec-link {
+  display:flex;justify-content:space-between;
+  /* padding:30rpx; */
+  padding:15px;
+}
+.menu-sec-link image {
+  /* width: 48rpx;
+  height:48rpx; */
+  width: 24px;
+  height:24px;
+}
+
+/* 比1px还细的线 */
+.thinline {
+  height: 1px;width:100%;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  background:#ccc;
+}
+
+/* 将button改为一般的label元素效果 */
+.clearbutton {
+  width:100%;margin:0;padding-left:0;
+  line-height: normal;font-size:16px;text-align:left;
+  background:#fff;
+}
+/* button的边框是通过after来设置的 */
+.clearbutton::after { border: none; }
+
+
+/* margin-top */
+.mt-15 {
+  margin-top:30rpx;
+}
+.mt-10 {
+  margin-top:20rpx;
+}
+.mt-5 {
+  margin-top:10rpx;
+}
+
+/* 较浅的颜色 */
+.spantext {
+  color: #666;
+}
+
+/* felx布局间隔 */
+.flexgap {
+  flex-grow: 1;
+}
+
+.fontsize-15 {
+  font-size: 14px;
+}
+.mini {
+  font-size: 14px;
+}
+.aligncenter {
+  text-align: center;
+}
+/* 暂无数据*/
+.nodata {
+  margin-top:100rpx;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
+
+
+/* 选增框select样式 */
+.select-view {
+  display: flex;
+  align-items: center;
+  padding:5px 8px;
+  border-radius:5px;
+  text-align:center;
+  background:rgb(0,255,0,.1);
+  box-shadow: 5px 5px 5px #ddd;
+  font-size: 14px;
+}
+.select-view image {
+  height:16px;width:16px;
+  margin-left:5px;
+}
+
+
+.color-green {
+  color: #09bb07;
+}
+
+.width16-height16 {
+  width:16px;height:16px;
+}
+.flexalignitems {
+  display:flex;align-items:center;
+}
+
+.height100 {
+  height: 150rpx;
+}

@@ -1,0 +1,93 @@
+/* miniprogram/pages/index/index.wxss */
+
+.top {
+  display: flex;
+  align-items: center;
+  padding:5px;
+}
+.avatar {
+  height:40px; width:40px;
+  margin:0 5px;
+  border:1px solid transparent;
+  border-radius: 5px;
+}
+
+.curday {
+  white-space: nowrap; /* 重要 */
+  border-top:1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.curday-sec {
+  display:inline-block; /* 重要 */
+  border-right:1px solid #333;
+}
+.curday-sec-text {
+  padding:5px 8px;
+}
+.curday-sec-text-false {
+  background: #fff;
+}
+.curday-sec-text-true {
+  background: rgba(255, 255, 0, 1)
+}
+.curday-sec-bottombg {
+  height:5px;
+  border-top:1px solid #333;
+}
+.curday-sec-bottombg-good {
+  background:rgba(0,255,0,1);
+}
+.curday-sec-bottombg-normal {
+  background: #fff;
+}
+.curday-sec-bottombg-bad {
+  background:rgba(255,255,0,1);
+}
+.curday-sec-bottombg-cry {
+  background:rgba(255,0,0,1);
+}
+
+.status {
+  display:flex;align-items:center;
+  margin:8px 5px;
+  font-size:14px;
+}
+.status-bg {
+  width:40px;height:15px;
+  margin-right:10px;
+  border:1px solid #333;
+}
+
+.main-sec {
+  display:flex;
+  /* justify-content:space-between; */
+  padding:8px;font-size:15px;
+}
+.main-seccontent {
+  border-bottom:1px dashed #333;
+}
+.main-sectitle {
+  border-top:1px solid #333;
+  border-bottom:1px solid #333;
+  text-align: center;
+}
+.main-sec-time {
+  flex-basis: 150rpx;
+  text-align: center;
+}
+.main-sec-food {
+ width: 300rpx;
+ margin-right:20rpx;
+ text-align: center;
+}
+.main-sec-remark {
+ width:280rpx;
+ flex-grow:1;
+ text-align: center;
+ word-wrap:break-word;
+}
+
+.returnbtn {
+  margin-left:20rpx;
+  box-shadow:5px 5px 5px #ddd;
+}

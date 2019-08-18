@@ -1,0 +1,20 @@
+/* miniprogram/pages/mine/mine.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+.top {
+  display:flex;align-items:center;justify-content:space-between;
+  padding:50rpx 50rpx;background:#fff;
+}
+.avatar {
+  height:60px;width:60px;
+  margin-right:30rpx;
+}
+
+.openid {
+  margin-top:5px;
+  font-size:12px;
+  color:#666;
+}

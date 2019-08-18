@@ -1,0 +1,14 @@
+<!--miniprogram/pages/funcIntro/funcIntro.wxml-->
+
+<view class="ver">
+  <view class="ver-sec" wx:for="{{updateInfo}}" wx:key="version">
+    <view class="ver-sec-title">v{{item.version}} ({{item.date}})</view>
+    <view class="ver-sec-list">
+      <view wx:for="{{item.detailArr}}" wx:key="text">
+        {{index + 1}}.
+        <text>{{item.type}}</text> {{verType[item.type]}}
+        {{item.text}}
+      </view>
+    </view>
+  </view>
+</view>

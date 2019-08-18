@@ -1,0 +1,25 @@
+/* miniprogram/pages/funcIntro/funcIntro.wxss */
+
+.ver {
+  margin:30rpx;
+}
+.ver-sec {
+  margin-top:30rpx;
+}
+.ver-sec-title {
+  font-weight: bold;
+  font-size: 17px;
+}
+.ver-sec-list {
+  font-size:14px;
+  padding-left:20rpx;
+}
+.ver-sec-list view {
+  display:flex;
+  margin-top:10rpx;
+}
+.ver-sec-list text {
+  display:block;
+  margin:0 5px;
+  /* background: rgba(100, 100, 100, 0.1); */
+}

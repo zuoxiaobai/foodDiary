@@ -1,0 +1,24 @@
+<!--miniprogram/pages/about/about.wxml-->
+
+<view>
+  <view class="about-top">
+    <image src="/images/avatar.png"></image>
+    <view class="mt-10">IBD饮食日记</view>
+    <view class="mt-5 spantext">Version {{version}}</view>
+  </view>
+
+  <!-- 菜单 -->
+  <view class="menu-sec margin10">
+    <view class="thinline"></view>
+    <view id="func-intro" class="menu-sec-link" bindtap="clickFunc">
+      功能介绍
+      <image src="/images/right.png"></image>
+    </view>
+    <view class="thinline"></view>
+    <view id="check-new-ver" class="menu-sec-link" bindtap="clickFunc">
+      检查新版本
+      <image src="/images/right.png"></image>
+    </view>
+    <view class="thinline"></view>
+  </view>
+</view>

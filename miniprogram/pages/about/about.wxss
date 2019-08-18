@@ -1,0 +1,13 @@
+/* miniprogram/pages/about/about.wxss */
+
+.about-top {
+  margin-top:100rpx;
+  text-align:center;font-size:15px;
+}
+.about-top image {
+  height:72px;width:72px;
+  border-radius:5px;
+}
+.margin10 {
+  margin:10%;
+}

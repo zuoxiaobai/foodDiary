@@ -1,0 +1,41 @@
+/* miniprogram/pages/addHistory/addHistory.wxss */
+
+page {
+  background: #f6f6f6;
+  /* font-size:17px; */
+}
+.top-info {
+  margin: 20rpx 0 40rpx 20rpx;
+  padding:0 20rpx;
+  font-weight:bold;
+  color:#09bb07;
+  border-left:5px solid #09bb07;
+}
+
+.form-sec {
+  display:flex;
+  padding: 10px;
+  font-size:17px;
+  background: #fff;
+}
+.form-sec-title {
+  width:200rpx;
+}
+.form-sec-content {
+  width:100%;
+}
+
+.form-view {
+  font-size: 17px;
+  /* margin-top:10px; */
+}
+.form-view-title {
+  padding:20rpx;
+}
+.form-view-content {
+  padding:20rpx;
+  background:#fff;
+}
+.form-btnview {
+  margin:60rpx 5%
+}

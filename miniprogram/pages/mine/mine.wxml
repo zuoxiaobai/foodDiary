@@ -1,0 +1,39 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+
+<view>
+  <!-- top -->
+  <view class="top">
+    <!-- <image src="/images/avatar.png"></image> -->
+    <open-data type="userAvatarUrl" class="avatar"></open-data>
+    <view>
+      <open-data type="userNickName"></open-data>
+      <view class="openid">{{openid}}</view>
+    </view>
+    <view class="flexgap"></view>
+  </view>
+  <view class="thinline"></view>
+
+  <!-- 中间菜单 -->
+  <view class="menu-sec">
+    <view class="thinline"></view>
+    <view class="menu-sec-link">
+      <button open-type="share" class="clearbutton">转发小程序</button>
+      <image src="/images/right.png"></image>
+    </view>
+    <view class="thinline"></view>
+    <view class="menu-sec-link">
+      <button open-type="feedback" class="clearbutton">问题反馈</button>
+     <image src="/images/right.png"></image>
+    </view>
+    <view class="thinline"></view>
+  </view>
+
+  <view class="menu-sec">
+    <view class="thinline"></view>
+    <view class="menu-sec-link" bindtap="aboutmp">
+      关于IBD饮食日记
+      <image src="/images/right.png"></image>
+    </view>
+    <view class="thinline"></view>
+  </view>
+</view>
