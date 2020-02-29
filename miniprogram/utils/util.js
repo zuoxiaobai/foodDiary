@@ -4,12 +4,21 @@
 function getYearMonthData() {
   let yearArr = []
   let monthArr = []
+
+  // 年份选择处理
+  let curYear = new Date().getFullYear()
+  let baseYear = 2018 // 从2018年开始，到今年结束
+  while(baseYear <= curYear) {
+    yearArr.push(`${baseYear}年`)
+    baseYear++
+  }
+
+  // 月份选择处理
   for (let mon = 1; mon <= 12; mon++) {
-    let year = mon + 2017
     let monStr = mon < 10 ? `0${mon}` : mon
-    yearArr.push(`${year}年`)
     monthArr.push(`${monStr}月`)
   }
+  
   this.setData({
     yearMonthArr: [
       yearArr,

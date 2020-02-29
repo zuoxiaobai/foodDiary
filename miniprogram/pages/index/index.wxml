@@ -3,6 +3,7 @@
 <view>
   <!-- 顶部时间、头像 -->
   <view class="top">
+    <!-- 使用多列选择器 -->
     <picker mode="multiSelector" bindchange="yearMonthChange" value="{{yearMonthIndex}}" range="{{yearMonthArr}}">
       <view class="select-view">
         <view>

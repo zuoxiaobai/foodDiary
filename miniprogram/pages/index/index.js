@@ -68,10 +68,35 @@ Page({
 
   // 年月选择框值改变
   yearMonthChange(event) {
-    this.data.yearMonthIndex = event.detail.value
+    let yearMonthIndex = event.detail.value
     this.setData({
       yearMonthIndex: event.detail.value
     })
+
+    // 原来的月份天数
+    let oriMonthDayCount = this.data.dateArr.length
+
+    // 切换日期list
+    let dateArr = [
+      this.data.yearMonthArr[0][yearMonthIndex[0]].split('年')[0],
+      this.data.yearMonthArr[1][yearMonthIndex[1]].split('月')[0]
+    ]
+    getMonDateList.apply(this, dateArr)
+
+    // 现在的月份天数
+    let curMonthDayCount = this.data.dateArr.length
+
+    // 这里注意，如果 1/31 切到 2月，默认为 2/31，会有异常，如果天数过小，切换到最大天数
+    // 如果当前天数游标，大于切换后月份天数最后一天
+    if (this.data.curDate > curMonthDayCount) {
+      console.log('月份天数超过最大值，使用当前天数最大值')
+
+      this.setData({
+        curDate: curMonthDayCount
+      })
+    }
+
+    // 刷新数据
     this.refreshData()
   },
 
@@ -150,6 +175,13 @@ Page({
       curDay: today,
       curDayStr: today.join('-')
     }) 
+
+    // 切换日期list
+    let dateArr = [
+      this.data.yearMonthArr[0][yearIndex].split('年')[0],
+      this.data.yearMonthArr[1][monIndex].split('月')[0]
+    ]
+    getMonDateList.apply(this, dateArr)
 
     server_getHistoryData.call(this, this.data.today, app.globalData.openid)
   },
