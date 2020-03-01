@@ -2,11 +2,14 @@
   "pages": [
     "pages/index/index",
     "pages/mine/mine",
-    "pages/funcIntro/funcIntro",
     "pages/about/about",
     "pages/addHistory/addHistory",
+    "pages/funcIntro/funcIntro",
     "pages/discover/discover",
-    "pages/addToMyMp/addToMyMp"
+    "pages/addToMyMp/addToMyMp",
+    "pages/lkCalc/lkCalc",
+    "pages/foodIgG/foodIgG",
+    "pages/contact/contact"
   ],
   "window": {
     "navigationBarBackgroundColor": "#F6F6F6",

@@ -1,5 +1,5 @@
 
-const { requestCloudFunc } = require('./requestCloudFunc.js')
+const { requestCloudFunc, showErrMsg } = require('./requestCloudFunc.js')
 
 // 首页 - 登录并获取当前记录
 async function server_loginAndGetHistory(app) {
@@ -10,9 +10,9 @@ async function server_loginAndGetHistory(app) {
 
     app.globalData.openid = openid
     server_getHistoryData.call(this, this.data.today, openid)
-
   } catch(err) {
     console.log(err)
+    showErrMsg(err.message)
   }
 }
 
@@ -67,6 +67,7 @@ async function server_getHistoryData(date, openid, isNotAllowCache, completeCall
     })
   } catch(err) {
     console.log(err)
+    showErrMsg(err.message)
   } finally {
     if (completeCallback) {
       completeCallback()
@@ -84,6 +85,7 @@ async function server_addHistoryData(date, openid, formData, app) {
     wx.navigateBack({})
   } catch(err) {
     console.log(err)
+    showErrMsg(err.message)
   }
 }
 
@@ -97,6 +99,7 @@ async function server_editHistoryData(_id, openid, formData, app) {
     wx.navigateBack({})
   } catch(err) {
     console.log(err)
+    showErrMsg(err.message)
   }
 }
 
@@ -110,6 +113,7 @@ async function server_deleteHistoryData(_id, openid, app) {
     wx.navigateBack({})
   } catch (err) {
     console.log(err)
+    showErrMsg(err.message)
   }
 }
 

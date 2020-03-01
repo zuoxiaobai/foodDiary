@@ -26,6 +26,16 @@
      <image src="/images/right.png"></image>
     </view>
     <view class="thinline"></view>
+    <view class="menu-sec-link" bindtap="github">
+      Github开源地址
+      <image src="/images/right.png"></image>
+    </view>
+    <view class="thinline"></view>
+    <view class="menu-sec-link" bindtap="contact">
+      联系作者
+      <image src="/images/right.png"></image>
+    </view>
+    <view class="thinline"></view>
   </view>
 
   <view class="menu-sec">

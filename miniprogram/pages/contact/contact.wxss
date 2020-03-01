@@ -1,0 +1,15 @@
+/* miniprogram/pages/concact/concact.wxss */
+
+.info {
+  margin: 30px 30px 10px;
+  color: #666;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+}
+.copywechat {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}

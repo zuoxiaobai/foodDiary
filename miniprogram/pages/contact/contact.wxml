@@ -1,0 +1,13 @@
+<!--miniprogram/pages/concact/concact.wxml-->
+
+<view class="info">
+  如果有关于IBD公益项目需要前端开发、小程序开发，或者对该小程序有什么反馈建议，可以通过微信联系我
+</view>
+
+<view class="contact">
+  <image src="/images/addWechat.png" style="width:312px;height:345px;"></image>
+</view>
+
+<view class="copywechat">
+  <button type="primary" size="mini" bindtap="copyWechat">点击复制微信号</button>
+</view>

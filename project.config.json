@@ -4,6 +4,7 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
@@ -17,11 +18,11 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"enhance": true
+		"uglifyFileName": false
 	},
 	"appid": "wx8a8ba8fb2ab452cf",
 	"projectname": "foodDiary",
-	"libVersion": "2.7.7",
+	"libVersion": "2.10.2",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"compileType": "miniprogram",

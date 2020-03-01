@@ -1,4 +1,4 @@
-// miniprogram/pages/discover/discover.js
+// miniprogram/pages/foodIgG/foodIgG.js
 Page({
 
   /**
@@ -13,42 +13,6 @@ Page({
    */
   onLoad: function (options) {
 
-  },
-
-  // 添加到我的小程序
-  addToMyMp() {
-    wx.navigateTo({
-      url: '/pages/addToMyMp/addToMyMp',
-    })
-  },
-
-  // IBD类克用药
-  toIBDLK() {
-    wx.navigateToMiniProgram({
-      appId: 'wx45333c9fc02af773',
-    })
-  },
-
-  // 类克计算器
-  toLKCalc() {
-    wx.showToast({
-      title: '类克计算器，规划中',
-      icon: "none"
-    })
-    // wx.navigateTo({
-    //   url: '/pages/lkCalc/lkCalc',
-    // })
-  },
-
-  // 食物不耐受
-  foodIgG() {
-    wx.showToast({
-      title: '食物不耐受，规划中',
-      icon: "none"
-    })
-    // wx.navigateTo({
-    //   url: '/pages/foodIgG/foodIgG',
-    // })
   },
 
   /**

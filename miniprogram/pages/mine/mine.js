@@ -28,6 +28,33 @@ Page({
     })
   },
 
+  github() {
+    wx.showModal({
+      title: '关于开源',
+      content: '本小程序代码已完全开源在Github，欢迎Star、提issue。地址：https://github.com/zuoxiaobai/foodDiary',
+      showCancel: false,
+      confirmText: '复制地址',
+      success() {
+        wx.setClipboardData({
+          data: 'https://github.com/zuoxiaobai/foodDiary',
+          success(res) {
+            wx.getClipboardData({
+              success(res) {
+                console.log(res.data) // data
+              }
+            })
+          }
+        })
+      }
+    })
+  },
+
+  contact() {
+    wx.navigateTo({
+      url: '/pages/contact/contact',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

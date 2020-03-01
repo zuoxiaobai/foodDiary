@@ -74,5 +74,6 @@ function requestCloudFunc(funcName, data) {
 }
 
 module.exports = {
-  requestCloudFunc
+  requestCloudFunc,
+  showErrMsg
 }
