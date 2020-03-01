@@ -1,0 +1,28 @@
+<!--miniprogram/pages/discover/discover.wxml-->
+
+<!-- 工具 -->
+<view>
+  <view class="top-info"> 
+    <view class="top-info-left">
+      <text>实用工具</text> 
+      <!-- <text class="fontsize-15"></text> -->
+    </view>
+    <view class="top-info-right">
+      <button type="primary" size="mini" bindtap="addToMyMp">添加到我的小程序</button>
+    </view>
+  </view>
+  <view class="tools-div">
+    <view class="tools-div-sec" bindtap="toIBDLK">
+      <image src="/images/tools/lk.png"></image>
+      <text>IBD类克用药</text>
+    </view>
+     <view class="tools-div-sec" bindtap="toLKCalc">
+      <image src="/images/tools/jisuanqi.png"></image>
+      <text>类克计算器</text>
+    </view>
+     <view class="tools-div-sec" bindtap="foodIgG">
+      <image src="/images/tools/shiwu.png"></image>
+      <text>食物不耐受</text>
+    </view>
+  </view>
+</view>

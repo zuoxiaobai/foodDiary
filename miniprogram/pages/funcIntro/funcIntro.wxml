@@ -12,3 +12,5 @@
     </view>
   </view>
 </view>
+
+<view class="bottom-gap">1</view>

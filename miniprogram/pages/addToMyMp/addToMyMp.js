@@ -1,31 +1,22 @@
-// miniprogram/pages/mine/mine.js
-
-const app = getApp()
-
+// miniprogram/pages/addToMyMp/addToMyMp.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    openid: ''
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      openid: app.globalData.openid
-    })
+
   },
 
-  // 关于IBD饮食日记
-  aboutmp() {
-    console.log('aboutmp')
-    wx.navigateTo({
-      url: "/pages/about/about"
-    })
+  goBack() {
+    wx.navigateBack({})
   },
 
   /**
@@ -73,15 +64,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function (res) {
-    if (res.from === 'button') {
-      // 来自页面内转发按钮
-      // console.log(res.target)
-    }
-    return {
-      title: 'IBD饮食日记',
-      path: '/pages/index/index',
-      imageUrl: '/images/share.png',
-    }
+  onShareAppMessage: function () {
+
   }
 })

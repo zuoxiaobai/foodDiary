@@ -30,6 +30,7 @@ Page({
     scrollPosition: 'curday-sec-14', // '滚动位置'
 
     history: [], 
+    showTips: true
     // history: historyData // 测试数据
   },
 
@@ -246,7 +247,7 @@ Page({
       // console.log(res.target)
     }
     return {
-      title: 'IDB饮食日记',
+      title: 'IBD饮食日记',
       path: '/pages/index/index',
       imageUrl: '/images/share.png',
     }

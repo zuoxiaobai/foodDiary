@@ -153,7 +153,7 @@ Page({
       // console.log(res.target)
     }
     return {
-      title: 'IDB饮食日记',
+      title: 'IBD饮食日记',
       path: '/pages/index/index',
       imageUrl: '/images/share.png',
     }

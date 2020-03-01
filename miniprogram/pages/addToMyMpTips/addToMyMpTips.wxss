@@ -1,0 +1,40 @@
+/* pages/addToMyMpTips/addToMyMpTips.wxss */
+.add-to-mymptips {
+  position: absolute;
+  right: 15px;
+  width: 270px;
+  margin-top:15px;
+  box-sizing: border-box;
+}
+
+/* 主内容区域 */
+.atm-main {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+  color:rgb(53, 53, 53);
+}
+
+/* 三个点图片样式 */
+.atm-main image {
+  width: 33px;
+  height: 15px;
+}
+
+/* 三角形+边框 区域 */
+.atm-angle-a, .atm-angle-b {
+  position: absolute;
+  margin-left:200px;
+  width: 0;
+  height: 0;
+  border: 10px solid;
+}
+.atm-angle-a {
+  top: -20px;
+  border-color: transparent transparent #ccc;
+}
+.atm-angle-b {
+  top:-19px;
+  border-color: transparent transparent #fff;
+}

@@ -106,3 +106,10 @@
 .height100 {
   height: 150rpx;
 }
+
+
+/* fix真机底部没间隙的问题 */
+.bottom-gap {
+  height: 100px;
+  color: white;
+}

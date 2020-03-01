@@ -1,0 +1,33 @@
+/* miniprogram/pages/discover/discover.wxss */
+
+.top-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.top-info-left {
+    /* margin: 20rpx 0 40rpx 20rpx; */
+  padding:0 20rpx;
+  font-weight:bold;
+  color:#09bb07;
+  border-left:5px solid #09bb07;
+}
+
+.tools-div {
+  display: flex;
+  /* border:1px solid #ccc; */
+  font-size:12px;
+  color: #666;
+}
+.tools-div-sec {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  margin: 5px 10px;
+}
+.tools-div-sec image {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}

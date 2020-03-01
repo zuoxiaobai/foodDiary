@@ -1,0 +1,7 @@
+<!--miniprogram/pages/addToMyMp/addToMyMp.wxml-->
+
+<add-to-mymptips />
+
+<view style="position:absolute;top:50%;left:50%;transform:translate(-50%, -50%)">
+  <button type="default" size="mini" bindtap="goBack">已添加</button>
+</view>

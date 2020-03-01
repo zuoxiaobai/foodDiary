@@ -1,30 +1,47 @@
-// miniprogram/pages/mine/mine.js
-
-const app = getApp()
-
+// miniprogram/pages/discover/discover.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    openid: ''
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      openid: app.globalData.openid
+
+  },
+
+  // 添加到我的小程序
+  addToMyMp() {
+    wx.navigateTo({
+      url: '/pages/addToMyMp/addToMyMp',
     })
   },
 
-  // 关于IBD饮食日记
-  aboutmp() {
-    console.log('aboutmp')
-    wx.navigateTo({
-      url: "/pages/about/about"
+  // IBD类克用药
+  toIBDLK() {
+    wx.navigateToMiniProgram({
+      appId: 'wx45333c9fc02af773',
+    })
+  },
+
+  // 类克计算器
+  toLKCalc() {
+    wx.showToast({
+      title: '类克计算器',
+      icon: "none"
+    })
+  },
+
+  // 食物不耐受
+  foodIgG() {
+    wx.showToast({
+      title: '食物特异性检测',
+      icon: "none"
     })
   },
 
@@ -73,15 +90,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function (res) {
-    if (res.from === 'button') {
-      // 来自页面内转发按钮
-      // console.log(res.target)
-    }
-    return {
-      title: 'IBD饮食日记',
-      path: '/pages/index/index',
-      imageUrl: '/images/share.png',
-    }
+  onShareAppMessage: function () {
+
   }
 })

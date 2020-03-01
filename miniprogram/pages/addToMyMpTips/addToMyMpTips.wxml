@@ -1,0 +1,9 @@
+<!--pages/addToMyMpTips/addToMyMpTips.wxml-->
+
+<view class="add-to-mymptips">
+  <view class="atm-angle-a"></view>
+  <view class="atm-angle-b"></view>
+  <view class="atm-main">
+    点击 <image src="/images/three_point.png"></image> 添加到我的小程序 <image src="/images/collect.png" style="height:20px;width:20px"></image>，微信首页下拉即可快速访问小程序
+  </view>
+</view>
