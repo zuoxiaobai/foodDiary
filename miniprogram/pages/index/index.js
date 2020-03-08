@@ -30,7 +30,8 @@ Page({
     scrollPosition: 'curday-sec-14', // '滚动位置'
 
     history: [], 
-    showTips: true
+    showTips: true,
+    auditMark: 1
     // history: historyData // 测试数据
   },
 
@@ -38,6 +39,44 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getConfig()
+    // {
+    //   date: "2019-08-14"
+    //   foodAndCount: "哈密瓜半个"
+    //   openid: "ocH374oiaXHKXoQxDX6Pfs77mLBs"
+    //   symptomAndRemark: "暂无"
+    //   time: "21:31"
+    //   _id: "890198e15d540d2a1427d41c3998fab9"
+    // }
+  },
+
+  getConfig() {
+    wx.request({
+      url: 'https://api.zuo11.com/ibd/fooddaily/info',
+      success: res => {
+        let data = res.data.data
+        let auditMark = data.auditMark
+        this.setData({
+          auditMark: auditMark
+        })
+
+        if (auditMark === 0) {
+          this.indexLoad()
+        }
+      },
+      fail(e) {
+        wx.showToast({
+          title: e.message,
+          icon: 'none'
+        })
+      },
+      complete() {
+
+      }
+    })
+  },
+
+  indexLoad() {
     // 获取年月选择器数据
     getYearMonthData.call(this, null)
 
@@ -48,7 +87,7 @@ Page({
     getMonDateList.apply(this, this.data.today)
 
     // 滑动到当前天
-    setTimeout(()=> {
+    setTimeout(() => {
       this.setData({
         scrollPosition: `curday-sec-${this.data.today[2]}`
       })
@@ -56,15 +95,6 @@ Page({
 
     // login 并获取当天的数据
     server_loginAndGetHistory.call(this, app)
-
-    // {
-    //   date: "2019-08-14"
-    //   foodAndCount: "哈密瓜半个"
-    //   openid: "ocH374oiaXHKXoQxDX6Pfs77mLBs"
-    //   symptomAndRemark: "暂无"
-    //   time: "21:31"
-    //   _id: "890198e15d540d2a1427d41c3998fab9"
-    // }
   },
 
   // 年月选择框值改变
@@ -124,7 +154,7 @@ Page({
     let index = e.currentTarget.id.split("-")[1]
     let curInfo = this.data.history[index]
     wx.showModal({
-      title: '您是否要修改该记录？',
+      title: '您是否要修改该信息？',
       // confirmText: "修改",
       content: 
       `时间：${curInfo.time}
@@ -224,6 +254,11 @@ Page({
    */
   onPullDownRefresh: function (e) {
     console.log('下拉事件')
+
+    if (this.data.auditMark !== 0) {
+      this.getConfig()
+    }
+
     let isNotAllowCache = true
     server_getHistoryData.call(this, this.data.curDay, app.globalData.openid, isNotAllowCache, ()=> {
       // 获取数据完成后
@@ -247,7 +282,7 @@ Page({
       // console.log(res.target)
     }
     return {
-      title: 'IBD饮食日记',
+      title: 'IBD健康管理',
       path: '/pages/index/index',
       imageUrl: '/images/share.png',
     }

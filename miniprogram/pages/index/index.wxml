@@ -1,6 +1,6 @@
 <!--miniprogram/pages/index/index.wxml-->
 
-<view>
+<view wx:if="{{auditMark === 0}}">
   <!-- 顶部时间、头像 -->
   <view class="top">
     <!-- 使用多列选择器 -->
@@ -37,7 +37,7 @@
 
   <!-- 状态 -->
   <view class="status">
-    今日状态：
+    状态：
     <picker mode="selector" bindchange="bindStatusChange" value="{{curStatus}}" range="{{statusArr}}" range-key="text">
       <view class="select-view">
         <view class="status-bg curday-sec-bottombg-{{statusArr[curStatus].content}}"></view>
@@ -69,9 +69,13 @@
     <!-- 如果记录为空 -->
     <view wx:if="{{history.length < 1}}" class="nodata">
       <!-- 增加添加记录的点击范围，防止手机上面不好点击 -->
-      暂无记录，<text class="color-green" bindtap="addHistory" style="padding: 30px 0;">添加一条记录 </text>
+      暂无信息，<text class="color-green" bindtap="addHistory" style="padding: 30px 0;">添加一条记录 </text>
     </view>
   </view>
 
 
+</view>
+
+<view wx:else>
+  <view class="noinfo">万物之中，希望至美</view>
 </view>

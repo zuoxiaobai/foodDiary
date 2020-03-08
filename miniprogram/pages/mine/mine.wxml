@@ -41,7 +41,7 @@
   <view class="menu-sec">
     <view class="thinline"></view>
     <view class="menu-sec-link" bindtap="aboutmp">
-      关于IBD饮食日记
+      关于IBD健康管理
       <image src="/images/right.png"></image>
     </view>
     <view class="thinline"></view>

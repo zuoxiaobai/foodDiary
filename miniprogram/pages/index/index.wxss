@@ -91,3 +91,12 @@
   margin-left:20rpx;
   box-shadow:5px 5px 5px #ddd;
 }
+
+.noinfo {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  font-size: 16px;
+}

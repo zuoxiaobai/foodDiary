@@ -3,7 +3,7 @@
 <view>
   <view class="about-top">
     <image src="/images/avatar.png"></image>
-    <view class="mt-10">IBD饮食日记</view>
+    <view class="mt-10">IBD健康管理</view>
     <view class="mt-5 spantext">Version {{version}}</view>
   </view>
 

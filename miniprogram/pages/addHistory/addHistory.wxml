@@ -41,10 +41,10 @@
     </view>
 
     <view class="form-btnview">
-      <button wx:if="{{!isEdit}}" id="add-opt" type="primary" form-type="submit">添加记录</button>
+      <button wx:if="{{!isEdit}}" id="add-opt" type="primary" form-type="submit">添加</button>
       <button wx:else type="primary" id="edit-opt" form-type="submit">保存修改</button>
 
-      <button wx:if="{{isEdit}}" class="mt-15" type="warn" bindtap="deleteHistory">删除记录</button>
+      <button wx:if="{{isEdit}}" class="mt-15" type="warn" bindtap="deleteHistory">删除</button>
 
       <button type="default" class="mt-15" bindtap="formCancel">取消</button>
     </view>

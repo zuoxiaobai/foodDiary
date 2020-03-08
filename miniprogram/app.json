@@ -13,7 +13,7 @@
   ],
   "window": {
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "饮食日记",
+    "navigationBarTitleText": "IBD健康管理",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

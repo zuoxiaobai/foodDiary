@@ -106,7 +106,7 @@ Page({
       // console.log(res.target)
     }
     return {
-      title: 'IBD饮食日记',
+      title: 'IBD健康管理',
       path: '/pages/index/index',
       imageUrl: '/images/share.png',
     }
